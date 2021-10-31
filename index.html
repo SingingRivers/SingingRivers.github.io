@@ -121,13 +121,13 @@ $(document).ready(function() {
 	try {
 	$('body').ripples({
 			resolution: 512,
-			dropRadius: 5, //px
+			dropRadius: 20, //px
 			perturbance: 0.05,
 		});
 		$('main').ripples({
 			resolution: 512,
-			dropRadius: 5, //px
-			perturbance: 0.02,
+			dropRadius: 20, //px
+			perturbance: 0.04,
 			interactive: true,
 		});
 }
@@ -155,8 +155,8 @@ $(document).ready(function() {
 		var $el = $('body');
 		var x = Math.random() * $el.outerWidth();
 		var y = Math.random() * $el.outerHeight();
-		var dropRadius = 20;
-		var strength = 0.04 + Math.random() * 0.04;
+		var dropRadius = 10;
+		var strength = 0.03 + Math.random() * 0.03;
 
 		$el.ripples('drop', x, y, dropRadius, strength);
 	}, 400);
