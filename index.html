@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+<title>Singing Rivers</title>
+<style>
+* { margin: 0; padding: 0; }
+html { 
+
+  height: 100vh;
+}
+body {
+	
+	font-size: 16px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	background-image: url(assets/img/background1.jpg);
+	background-size: cover;
+	background-position: center;
+	 
+  height: 100vh;
+
+	text-align: center;
+}
+#body .animated {
+ margin-bottom: 30px;
+ animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+[data-aos="fade-out"] {
+  opacity: 1;
+  transition-property: opacity;
+  &.aos-animate {
+    opacity: 0;
+  }
+
+body:before {
+	content: '';
+	
+         height: 100vh;
+
+}
+
+
+h1 {
+	font-size: 32px;
+}
+h2 {
+	font-size: 18px;
+	margin-top: 6px;
+}
+p {
+	text-align: left;
+	margin-top: 20px;
+}
+a {
+	color: #ff6800;
+}
+pre {
+	text-align: left;
+	margin-top: 20px;
+}
+
+.error {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #000;
+	color: #f00;
+	padding: 5px;
+	max-width: 50%;
+}
+
+button {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	padding: 0 0.8em;
+	line-height: 2em;
+	border: none;
+	background: #666;
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+	border-radius: 4px;
+	cursor: pointer;
+	margin-bottom: 0.5em;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.5);
+}
+
+button:hover {
+	background: #888;
+}
+
+code { font-size: 0.8em; display: inline; }
+
+
+.code-string { color:#ec7600 }
+.code-cbracket { font-weight:bold }
+.code-number { color:#ffcd22 }
+
+</style>
+</head>
+<body>
+
+<main>
+
+	
+		
+	
+</main>
+
+	
+<h1 data-aos= "fade-up" data-aos-delay="100"></h1>
+      <a href="index0.html" class="img-fluid animated" data-aos="zoom-in"data-aos-delay="100"><img src="assets/img/logorivers2.png" alt=""></a>
+
+<div class="error"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="jquery.ripples/dist/jquery.ripples.js"></script>
+<script>
+$(document).ready(function() {
+	try {
+	$('body').ripples({
+			resolution: 512,
+			dropRadius: 30, //px
+			perturbance: 100,
+		});
+		$('main').ripples({
+			resolution: 128,
+			dropRadius: 50, //px
+			perturbance: 100,
+			interactive: true,
+		});
+}
+// Automatic drops
+	
+	catch (e) {
+		$('.error').show().text(e);
+	}
+
+	$('.js-ripples-disable').on('click', function() {
+		$('body, main').ripples('destroy');
+		$(this).hide();
+	});
+
+	$('.js-ripples-play').on('click', function() {
+		$('body, main').ripples('play');
+	});
+
+	$('.js-ripples-pause').on('click', function() {
+		$('body, main').ripples('pause');
+	});
+
+	// Automatic drops
+	setInterval(function() {
+		var $el = $('body');
+		var x = Math.random() * $el.outerWidth();
+		var y = Math.random() * $el.outerHeight();
+		var dropRadius = 20;
+		var strength = 0.04 + Math.random() * 0.04;
+
+		$el.ripples('drop', x, y, dropRadius, strength);
+	}, 400);
+});
+</script>
+<!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

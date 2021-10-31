@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Singing Rivers</title>
+<style>
+* { margin: 0; padding: 0; }
+html { 
+width: 100%;
+  height: 104vh;
+}
+body {
+	
+	font-size: 16px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	background-image: url(img/background1.jpg);
+	background-size: cover;
+	background-position: center;
+	 
+  height: 104vh;
+
+	text-align: center;
+}
+
+body:before {
+	content: '';
+	
+         height: 104vh;
+
+}
+
+
+h1 {
+	font-size: 32px;
+}
+h2 {
+	font-size: 18px;
+	margin-top: 6px;
+}
+p {
+	text-align: left;
+	margin-top: 20px;
+}
+a {
+	color: #ff6800;
+}
+pre {
+	text-align: left;
+	margin-top: 20px;
+}
+
+.error {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #000;
+	color: #f00;
+	padding: 5px;
+	max-width: 50%;
+}
+
+button {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	padding: 0 0.8em;
+	line-height: 2em;
+	border: none;
+	background: #666;
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+	border-radius: 4px;
+	cursor: pointer;
+	margin-bottom: 0.5em;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.5);
+}
+
+button:hover {
+	background: #888;
+}
+
+code { font-size: 0.8em; display: inline; }
+
+
+.code-string { color:#ec7600 }
+.code-cbracket { font-weight:bold }
+.code-number { color:#ffcd22 }
+
+</style>
+</head>
+<body>
+
+<main>
+	
+
+
+	<button class="js-ripples-play" type="button">
+		<code>$(<span class="code-string">'body'</span>).ripples(<span class="code-string">"play"</span>)</code>
+	</button>
+	</p>
+
+	<p>Download or fork this effect at <a href="//github.com/sirxemic/jquery.ripples/">Github</a>.</p>
+</main>
+
+<button class="js-ripples-disable disable">
+	Click here if your PC can't handle this effect very well
+	(<code>$(<span class="code-string">'body'</span>).ripples(<span class="code-string">"destroy"</span>)</code>)
+</button>
+
+<div class="error"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../dist/jquery.ripples.js"></script>
+<script>
+$(document).ready(function() {
+	try {
+	$('body').ripples({
+			resolution: 512,
+			dropRadius: 50, //px
+			perturbance: 60,
+		});
+		$('main').ripples({
+			resolution: 128,
+			dropRadius: 50, //px
+			perturbance: 50,
+			interactive: false
+		});
+}
+// Automatic drops
+	
+	catch (e) {
+		$('.error').show().text(e);
+	}
+
+	$('.js-ripples-disable').on('click', function() {
+		$('body, main').ripples('destroy');
+		$(this).hide();
+	});
+
+	$('.js-ripples-play').on('click', function() {
+		$('body, main').ripples('play');
+	});
+
+	$('.js-ripples-pause').on('click', function() {
+		$('body, main').ripples('pause');
+	});
+
+	// Automatic drops
+	setInterval(function() {
+		var $el = $('main');
+		var x = Math.random() * $el.outerWidth();
+		var y = Math.random() * $el.outerHeight();
+		var dropRadius = 20;
+		var strength = 0.04 + Math.random() * 0.04;
+
+		$el.ripples('drop', x, y, dropRadius, strength);
+	}, 400);
+});
+</script>
+</body>
+</html>
