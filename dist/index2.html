@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Attach a popup to a marker instance</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' href="./style.css">
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="map"></div>
+<!-- partial -->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js'></script><script  src="./script.js"></script>
+<style>
+
+#marker {
+    background-image: url('https://https://docs.mapbox.com/help/demos/custom-markers-gl-js/mapbox-icon.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.marker {
+        background-image: url('https://docs.mapbox.com/help/demos/custom-markers-gl-js/mapbox-icon.png');
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+.mapboxgl-popup {
+    max-width: 400px;
+}
+
+.mapboxgl-popup-content {
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+</style>
+
+<div id='map'>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiYXV0b2Rpb3MiLCJhIjoiY2t2aDd6dm93MWswOTJvcTVrNHl5NnAwOCJ9.hlT4XpGVexycp6vVqmf88g';
+const geojson = {
+        'type': 'FeatureCollection',
+        'features': [
+          {
+            'type': 'Feature',
+            'geometry': {
+              type: "Polygon",
+              coordinates: [
+                [
+                  [
+                    -74.33942985719926,
+                    -8.923994741838127, 
+                    
+                  ],
+                  [
+                    -74.33942985719926,
+                    -8.923994741838127, 
+                  ],
+                  [
+                    -8.923994741838127, 
+                    -74.33942985719926,
+                  ],
+                  [
+                    -8.923994741838127, 
+                    -74.33942985719926,
+                  ],
+                  [
+                    -8.923994741838127, 
+                    -74.33942985719926,
+                  ],
+                ]
+              ]
+            },
+            'properties': {
+              'title': 'Mapbox',
+              'description': 'Municipio de Tapachula, Chiapas'
+            }
+          },
+          {
+            'type': 'Feature',
+            'geometry': {
+              type: "Polygon",
+              coordinates: [
+                [
+                  [
+                    -77.300715, -7.772441,
+                  ],
+                  [
+                   -77.300717, -7.772443,
+                  ],
+                  [
+                    -89.48776245117188,
+                    18.41056376717653,
+                  ],
+                  [
+                    -90,
+                    18.41056376717653,
+                  ],
+                  [
+                    -90,
+                    17.81930071664984,
+                  ],
+                ]
+              ]
+            },
+            'properties': {
+              'title': 'Video',
+              'description': 'Municipio de Calakmul, Campeche y Municipio de Othon P. Blanco, Quintana Roo'
+            }
+          }
+        ]
+      };
+
+var monument = [-74.33942985719926,
+                    -8.923994741838127,];
+var map = new mapboxgl.Map({
+   container: 'map',
+        style: 'mapbox://styles/autodios/ckvh9tuir0qce14oasbcnakec',
+        center: [ -77.300715, -7.772441],
+        zoom: 5,
+        minZoom: 3,
+});
+
+// create the popup
+var popup = new mapboxgl.Popup({ offset: 25 })
+   .setHTML("<iframe src=https://www.youtube.com/embed/fpl4no2T1sQ frameborder=0 allow=accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe>")
+
+// create DOM element for the marker
+var el = document.createElement('div');
+el.id = 'marker';
+
+// create the marker
+new mapboxgl.Marker(el)
+    .setLngLat(monument)
+    . .setPopup(
+            new mapboxgl.Popup({ offset: 25 }) // add popups
+
+
+for (const feature of geojson.features) {
+        // create a HTML element for each feature
+        const el = document.createElement('div');
+        el.className = 'marker';
+</div>
+
+</script>
+
+</body>
+</html>

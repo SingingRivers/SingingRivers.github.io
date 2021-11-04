@@ -1,0 +1,214 @@
+body {
+        margin: 0;
+        padding: 0;
+       
+      }
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: -1;
+      }
+        #map-background,
+        #map-container,
+        #map-overlay,
+        #content {
+        width: 100%;
+        min-height: 100%;
+        position: absolute;
+        }
+	#map-background {
+  	z-index: -1;
+	}
+	#map-container {
+  	z-index: 0;
+	}
+
+	#content {
+ 	 z-index: 0;
+	}
+      .marker {
+        background-image: url('marker.png');
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .mapboxgl-popup {
+        max-width: 400px;
+		
+      }
+      .mapboxgl-popup-content {
+        text-align: center;
+        font-family: 'Source Sans Pro', sans-serif;
+		width: 400px;
+		background-color: rgba(150,200,150,0.8);
+		
+      }
+      .container {
+       position: relative;
+       background: #ff6600;
+       z-index: 1;
+       
+      }
+
+      /* Bottom right text */
+      .text-block {
+       position: relative;
+       bottom: 20px;
+       right: 20px;
+       background-color: rgba(150,200,150,0.8);
+       color: black;
+       padding-left: 20px;
+       padding-right: 20px;
+       
+       
+       }
+       
+.top_div {
+	background-color: rgba(150,200,150,0.8);
+	position: absolute;
+	padding-left: 450px;
+	padding-right: 40px;
+	font-size: 1.4vh;
+	font-family: 'Roboto', sans-serif;
+	line-height: 250%;
+}
+.bottom_div {
+	background-color: rgba(150,200,150,0.8);
+	position: absolute;
+	padding-left: 450px;
+	padding-right: 40px;
+	bottom: 0px;
+	font-size: 1.4vh;
+	font-family: 'Roboto', sans-serif;
+	line-height: 250%;
+	
+}
+
+.div_left {
+	width: 30%;
+}
+.top_bottom_text {
+	padding-top: 40px;
+	color: #000000; 
+	text-align: justify; 
+	padding-right: 50px;
+	font-size
+}
+    
+  /**   Navigation Menu
+--------------------------------------------------------------*/
+
+/** Desktop Navigation 
+*/
+.navbar {
+  height: 100%;
+  width: 400px;
+  position: absolute;
+  z-index: 1;
+  /*top: 0;*/
+  /*left: 0;*/
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  font-family: 'Source Sans Pro';
+}
+
+.navbar ul {
+	padding-top: 10px;
+}
+
+.navbar a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgba(150,200,150,0.45);
+  display: block;
+  font-family: 'Source Sans Pro';
+}
+
+.navbar a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .navbar {padding-top: 15px;}
+  .navbar a {font-size: 18px;}
+}
+
+@media screen and (max-width: 800px) {
+  .navbar {padding-top: 15px;width: 160px}
+  .navbar a {font-size: 18px;}
+  .top_div {padding-left: 190px;padding-right: 30px;}
+  .bottom_div {padding-left: 190px;padding-right: 30px;}
+  .top_div {font-size: 1.8vw;}
+  .bottom_div {font-size: 1.8vw;}
+}
+
+
+
+.mobile-nav-toggle {
+  color: #151515;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+.mobile-nav-toggle.bi-x {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+  
+}
+
+.navbar-mobile {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  width: 200px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.navbar-mobile a {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #151515;
+}
+
+

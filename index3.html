@@ -1,149 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
-<title>jQuery WebGL Ripples</title>
-<style>
-* { margin: 0; padding: 0; }
-html {
-	height: 100%;
-}
-body {
-	color: #fff;
-	font-size: 16px;
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-	background-image: url("../img/background1.jpeg");
-	background-size: cover;
-	background-position: 50% 0;
-	height: 100%;
-	text-align: center;
-}
-
-body:before {
-	content: '';
-	display: inline-block;
-	vertical-align: middle;
-	height: 100%;
-}
-
-main {
-	display: inline-block;
-	vertical-align: middle;
-	background: url("../img/background1.jpeg");
-	padding:  100px;
-	max-width: 500px;
-	text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-	box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-}
-
-h1 {
-	font-size: 32px;
-}
-h2 {
-	font-size: 18px;
-	margin-top: 6px;
-}
-p {
-	text-align: left;
-	margin-top: 20px;
-}
-a {
-	color: #ff6800;
-}
-pre {
-	text-align: left;
-	margin-top: 20px;
-}
-
-.error {
-	display: none;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	background: #000;
-	color: #f00;
-	padding: 5px;
-	max-width: 50%;
-}
+  <meta charset="UTF-8">
+  <title>Singing Rivers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" /><link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Caveat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Gloria Hallelujah:300,300i,400,400i,500,500i,600,600i,700,700i|Fuggles:300,300i,400,400i,500,500i,600,600i,700,700i|Source sans Pro:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Gloria+Hallelujah:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">-->
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+<link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css'><link rel="stylesheet" href="./style3.css">
 
 
-
-code { font-size: 0.8em; display: inline; }
-
-.disable {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-}
-
-.code-string { color:#ec7600 }
-.code-cbracket { font-weight:bold }
-.code-number { color:#ffcd22 }
-
-</style>
 </head>
 <body>
 
-<main>
 
 
-	<pre><code>
-$(<span class="code-string">'body'</span>).ripples(<span class="code-cbracket">{</span>
-	resolution: <span class="code-number">512</span>,
-	dropRadius: <span class="code-number">20</span>,
-	perturbance: <span class="code-number">0.04</span>,
-<span class="code-cbracket">}</span>);
-	</code></pre>
+<div class="div_left">
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="#hero">Intro</a></li>
+          <li><a  href="#about">Hidro</a></li>
+          <li><a  href="#services">Homo</a></li>
+          <li><a  href="#portfolio">Lingua</a></li>
+     
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
 
+</div>
+     
+<!-- partial:index.partial.html -->
+<section>
+<div class="top_div">
+	<p style="top_bottom_text justify">
+		All technical revolutions lead to social transformation.  Yet the current history of <i>Technics</i> is presented as linear, as the wide river where smaller tributaries – this other stories of technical development – are not taken into account. 
+
+Now we are confronted to another revolution within the technological realm: that of Machine Learning and its trained models that are files “taught” to recognize patterns. This patterns now serve to explain our reality. Yet these are largely biased as the data used does not include the totality of information produced by the world. 
+
+We can ask if we should we be supportive of this merciless quantification of reality - at the very least, we need to take a critical stance, as it is happening whether we like it or not. Hence some contribute in the making of that data more varied, fighting against the inevitable bias of this new systems, as these models can be "opinions embedded in mathematics.” 
+	<b>The <i>Singing Rivers</i> is one of this projects: using the analogy of the talking river (a common way to refer to the Rimac river in Peru, where the Quechua word means speech) it contributes to make it sing in a multiplicity of voices by training popular Machine Learning models with datasets that prioritize other peoples and cultures, in this case, linked to the Amazonia and its water channels that have been communication channels traditionally. </b>
+	</p>
+</div>
+<div id="map"></div>
+<!-- partial -->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js'></script><script  src="./script3.js"></script>
+
+
+<div class="bottom_div">
+	<p style="top_bottom_text justify">
 	
 
-
-<div class="error"></div>
-
-<script src=""../jquery.ripples/dist/jquery.ripples.min.js"></script>
-<script src="../jquery.ripples/dist/jquery.ripples.js"></script>
-<script>
-$(document).ready(function() {
-	try {
-		$('body').ripples({
-			resolution: 512,
-			dropRadius: 20, //px
-			perturbance: 0.04,
-		});
-		$('main').ripples({
-			resolution: 128,
-			dropRadius: 10, //px
-			perturbance: 0.04,
-			interactive: false
-		});
-	}
-	catch (e) {
-		$('.error').show().text(e);
-	}
-
-	$('.js-ripples-disable').on('click', function() {
-		$('body, main').ripples('destroy');
-		$(this).hide();
-	});
-
-	$('.js-ripples-play').on('click', function() {
-		$('body, main').ripples('play');
-	});
-
-	$('.js-ripples-pause').on('click', function() {
-		$('body, main').ripples('pause');
-	});
-
-	// Automatic drops
-	setInterval(function() {
-		var $el = $('main');
-		var x = Math.random() * $el.outerWidth();
-		var y = Math.random() * $el.outerHeight();
-		var dropRadius = 20;
-		var strength = 0.04 + Math.random() * 0.04;
-
-		$el.ripples('drop', x, y, dropRadius, strength);
-	}, 400);
-});
-</script>
+<b>By clicking on the map, you will be able to visualize how rivers connected to the Amazonas river and its surrounding areas have changed since the 70s. At this stage, Machine Learning becomes a tool that allows us to “fill in the gaps,” recreating missing data from scattered frames. In this way, we can clearly understand how the area has transformed, alongside the river bed itself, for the last 50 years.</b>
+	</p>
+</div>
+</section>
 </body>
 </html>
+
