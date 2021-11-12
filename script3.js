@@ -34,9 +34,9 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYXV0b2Rpb3MiLCJhIjoiY2t2aDd6dm93MWswOTJvcTVrN
               ]
             },
             'properties': {
-              'title': 'Tributaries of the Ucayali',
-              'description': 'The Huallaga',
-			  'video': 'videos/video.mp4'
+              'title': 'Deforestation in the Amazonia',
+              'description': 'The Mennonites',
+			  'video': 'videos/mennonites.mp4'
               
             }
           },

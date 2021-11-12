@@ -1,6 +1,7 @@
 body {
         margin: 0;
         padding: 0;
+        
        
       }
       #map {
@@ -38,11 +39,12 @@ body {
       }
       .mapboxgl-popup {
         max-width: 400px;
+        z-index: 9999;
 		
       }
       .mapboxgl-popup-content {
         text-align: center;
-        font-family: 'Source Sans Pro', sans-serif;
+        font-family: 'Roboto', sans-serif;
 		width: 400px;
 		background-color: rgba(150,200,150,0.8);
 		
@@ -68,35 +70,90 @@ body {
        }
        
 .top_div {
-	background-color: rgba(150,200,150,0.8);
+	background-color: rgba(255,255,190,0.5);
 	position: absolute;
 	padding-left: 450px;
 	padding-right: 40px;
 	font-size: 1.4vh;
-	font-family: 'Roboto', sans-serif;
-	line-height: 250%;
+	font-family: 'Monserrat', sans-serif;
+	line-height: 1.5em;
+	z-index: 0;
+	 text-align: justify;
+  text-justify: inter-word;
+   text-shadow: 0 0 4px #FFFFA5, 0 0 4px #FFFFA5;
 }
 .bottom_div {
-	background-color: rgba(150,200,150,0.8);
-	position: absolute;
+	background-color: rgba(255,255,190,0.5);
+	position: fixed;
 	padding-left: 450px;
 	padding-right: 40px;
 	bottom: 0px;
 	font-size: 1.4vh;
-	font-family: 'Roboto', sans-serif;
-	line-height: 250%;
+	font-family: 'Monserrat', sans-serif;
+	 text-shadow: 0 0 4px #FFFFA7, 0 0 5px #FFFFA7;
+	line-height: 1.5em;
+	 text-align: justify;
+  text-justify: inter-word;
 	
+}
+.top_div1 {
+	background-color: rgba(255,255,255,0);
+	position: fixed;
+	padding-left: 450px;
+	padding-right: 40px;
+	font-size: 1.4vh;
+	font-family: 'Monserrat', sans-serif;
+	line-height: 1.5em;
+	z-index: 0;
+	 text-align: justify;
+  text-justify: inter-word;
+   text-shadow: 0 0 4px #FFFFFF, 0 0 4px #FFFFFF;
+}
+.bottom_div1 {
+	background-color: rgba(255,255,255,0.5);
+	position: fixed;
+	padding-left: 450px;
+	padding-right: 40px;
+	bottom: 0px;
+	font-size: 1.4vh;
+	font-family: 'Monserrat', sans-serif;
+	 text-shadow: 0 0 4px #FFFFFF, 0 0 5px #FFFFFF;
+	line-height: 1.5em;
+	 text-align: justify;
+  text-justify: inter-word;
+	
+}
+.middle_div {
+  
+  position:  absolute;
+  padding-top: 20vh;
+  flex-wrap: wrap-reverse;
+  padding-left: 45vh;
+  padding-bottom: 150px;
+  align-items: center;
+  margin: auto;
+  z-index: 0;
+}
+.iframe_video {
+  width: 45vh;
+  height: 30vw;
+  transform: translate(0, 10%);
+  frameborder: 0;
+  allow: accelerometer;
+  autoplay: True;
+  encrypted-media: True;
 }
 
 .div_left {
 	width: 30%;
+	z-index: 1;
 }
 .top_bottom_text {
 	padding-top: 40px;
 	color: #000000; 
-	text-align: justify; 
+	/*text-align: justify;*/ 
 	padding-right: 50px;
-	font-size
+  font-size: 3.2vw;
 }
     
   /**   Navigation Menu
@@ -107,14 +164,15 @@ body {
 .navbar {
   height: 100%;
   width: 400px;
-  position: absolute;
+  position: fixed;
   z-index: 1;
+  display: flex;
   /*top: 0;*/
   /*left: 0;*/
-  background-color: #111;
+  background-color: #FFA500;
   overflow-x: hidden;
   padding-top: 20px;
-  font-family: 'Source Sans Pro';
+  font-family: "Roboto", sans-serif;
 }
 
 .navbar ul {
@@ -124,10 +182,12 @@ body {
 .navbar a {
   padding: 6px 6px 6px 32px;
   text-decoration: none;
-  font-size: 25px;
-  color: rgba(150,200,150,0.45);
+  font-size: 40px;
+  line-height: 1.5em;
+  color: rgba(130,224,128,0.95);
   display: block;
-  font-family: 'Source Sans Pro';
+  font-family: "Monoton", sans-serif;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
 
 .navbar a:hover {
@@ -142,15 +202,32 @@ body {
   .navbar {padding-top: 15px;}
   .navbar a {font-size: 18px;}
 }
+@media screen and (max-width: 2200px){
+  .top_div {font-size: 1vw}
+  
+  @media screen and (max-width: 4000px){
+  .top_div {font-size: 1vw}
+  
+  
+  
+}
+@media screen and (max-width: 1200px){
+  .bottom_div {font-size: 1.4vw}
+}
 
 @media screen and (max-width: 800px) {
   .navbar {padding-top: 15px;width: 160px}
   .navbar a {font-size: 18px;}
   .top_div {padding-left: 190px;padding-right: 30px;}
   .bottom_div {padding-left: 190px;padding-right: 30px;}
+  .top_div1 {padding-left: 190px;padding-right: 30px;}
+  .bottom_div1 {padding-left: 190px;padding-right: 30px;}
   .top_div {font-size: 1.8vw;}
   .bottom_div {font-size: 1.8vw;}
+  .middle_div {padding-left: 190px;padding-top: 70vw;}
+  .iframe_video {width: 60vw;height: 35vw;}
 }
+
 
 
 
@@ -182,7 +259,7 @@ body {
   bottom: 0;
   background: rgba(0, 0, 0, 0.9);
   transition: 0.3s;
-  z-index: 999;
+  z-index: 1;
 }
 
 .navbar-mobile .mobile-nav-toggle {
@@ -209,6 +286,7 @@ body {
   padding: 10px 20px;
   font-size: 15px;
   color: #151515;
+  font-family: "Roboto", sans-serif;
 }
 
 
