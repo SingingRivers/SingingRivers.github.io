@@ -22,18 +22,28 @@
 
 
 
-<div class="div_left">
-      <nav id="navbar" class="navbar">
-        <ul>
+<div class="topnav" id="myTopnav">
+       
           <a href="index.html"><b>Intro</b></a>
           <a  href="index3.html"><b>Hidro</b></a>
           <a  href="index5.html"><b>Homo</b></a>
           <a  href="index4.html"><b>Texere</b></a>     
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-
+      
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
 </div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
      
 <!-- partial:index.partial.html -->
 <section>
@@ -48,10 +58,12 @@
 	</p>
 </div>
 <!-- partial -->
-<div class="middle_div">
+<div class="wrapper4">
+<div class="box4">
   <iframe class="iframe_video" src='./videos/shipibo1.mp4' frameborder=0 allow=accelerometer; gyroscope; picture-in-picture allowfullscreen></iframe>
   <iframe class="iframe_video" src='./videos/shipibo2.mp4' frameborder=0 allow=accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe>
   <iframe class="iframe_video" src='./videos/shipibo3.mp4' frameborder=0 allow=accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe>
+</div>
 </div>
 
 <div class="bottom_div1">

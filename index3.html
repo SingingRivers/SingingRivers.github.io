@@ -17,27 +17,55 @@
 <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css'><link rel="stylesheet" href="./style3.css">
 
 
+
 </head>
 <body>
 
 
 
-<div class="div_left">
-      <nav id="navbar" class="navbar">
-        <ul>
+
+<div class="topnav" id="myTopnav">
+       
           <a href="index.html"><b>Intro</b></a>
           <a  href="index3.html"><b>Hidro</b></a>
           <a  href="index5.html"><b>Homo</b></a>
           <a  href="index4.html"><b>Texere</b></a>     
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-
+      
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
 </div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+<div id="main">
+ 
+
+
+
+
      
 <!-- partial:index.partial.html -->
 <section>
 <div class="top_div">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <script>
+
+
+function closeNav() {
+  document.getElementById("top_div").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
 	<p style="top_bottom_text justify">
 	<p><p>
 		All technical revolutions lead to social transformation.  
@@ -50,7 +78,9 @@ We can ask if we should we be supportive of this merciless quantification of rea
 </div>
 <div id="map"></div>
 <!-- partial -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js'></script><script  src="./script3.js"></script>
+
 
 
 <div class="bottom_div">

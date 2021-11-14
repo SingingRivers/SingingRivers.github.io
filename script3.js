@@ -36,7 +36,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYXV0b2Rpb3MiLCJhIjoiY2t2aDd6dm93MWswOTJvcTVrN
             'properties': {
               'title': 'Deforestation in the Amazonia',
               'description': 'The Mennonites',
-			  'video': 'videos/mennonites.mp4'
+			  'video': 'videos/mennonites.mp4',
+			  'thumbnail': 'thumbnails/mennonites.jpg'
               
             }
           },
@@ -70,7 +71,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYXV0b2Rpb3MiLCJhIjoiY2t2aDd6dm93MWswOTJvcTVrN
             'properties': {
              'title': 'Origin of Ucayali River',
               'description': 'Convergence of Apurimac (Ene + Tambo) and Urubamba Rivers',
-              'video': 'videos/video.mp4'
+              'video': 'videos/video.mp4',
+              'thumbnail': 'thumbnails/video.jpg'
 
             }
           },
@@ -98,8 +100,20 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYXV0b2Rpb3MiLCJhIjoiY2t2aDd6dm93MWswOTJvcTVrN
           .setPopup(
             new mapboxgl.Popup({ offset: 25 }) // add popups
               .setHTML(
-                `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p><iframe src=${feature.properties.video} frameborder=0 allow=accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe>`
+                `<h3>${feature.properties.title}</h3>
+                	<p>${feature.properties.description}</p>
+				        <a href="#example1"><img class="img" src=${feature.properties.thumbnail}></a>
+				        <link rel="stylesheet" href="./lightboxy.css">
+				        <div class="lightboxs" id="example1">
+				        	<figure>
+				        		<a href="#" class="close"></a>
+				        			<iframe class="video" src=${feature.properties.video} frameborder=0 allow=accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe>
+				        	</figure>
+				        </div>
+				        `
               )
           )
           .addTo(map);
       }
+      
+
