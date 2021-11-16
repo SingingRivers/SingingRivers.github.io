@@ -157,14 +157,14 @@ font-weight: 50;
 #header h2 {
   color: #ffff;
   margin-bottom: 5px;
-  font-size: 11px;
+  font-size: 30px;
   font-weight: 60;
   font-family: "Roboto", sans-serif;
  
 }
 
 #header h2 span {
-font-size: 20px;
+font-size: 40px;
 font-weight: 30;
   color: #106eea;
  font-family: "Gloria Hallelujah", sans-serif;
@@ -447,7 +447,7 @@ font-family: "Gloria Hallelujah", sans-serif;
 
 #hero h1 span2 {
 color: #FDD023;
-font-size: 40px;
+font-size: 50px;
 font-weight: 50;
  font-family: "Caveat", serif;
 }
@@ -462,14 +462,14 @@ font-weight: 50;
 #hero h2 {
   color: #ffff;
   margin-bottom: 5px;
-  font-size: 11px;
+  font-size: 25px;
   font-weight: 60;
   font-family: "Roboto", sans-serif;
  
 }
 
 #hero h2 span {
-font-size: 20px;
+font-size: 30px;
 font-weight: 30;
   color: #106eea;
  font-family: "Gloria Hallelujah", sans-serif;
@@ -478,7 +478,7 @@ font-weight: 30;
 
 
 #hero h2 span2 {
-font-size: 20px;
+font-size: 30px;
 font-weight: 40;
   color: #ffe20b;
  font-family: "Helvetica Neue", sans-serif;
@@ -499,7 +499,7 @@ font-weight: 40;
 	color: #FFFF00;
 	border: 1px solid #D56F00;
 	text-decoration: none;
-	font-size: 14px;
+	font-size: 30px;
 	line-height: 120%;
 	background-color: rgba(255,255,10, 0.2);
 	text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
@@ -508,7 +508,7 @@ font-weight: 40;
 
 #hero .btn-get-started:hover {
   font-weight: 80;
-  font-size: 16px;
+  font-size: 25px;
   transition: 0.5s;
   background: #fff;
   color: #106eea;
