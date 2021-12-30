@@ -109,18 +109,19 @@ body {
 	
 }
 .top_div1 {
-	background-color: rgba(255,255,255,0);
-	position: absolute;
+		background-color: rgba(255,255,190,0.5);
+	position: fixed;
 	padding-left: 40px;
 	padding-right: 40px;
+    top: 5px;
+	padding-top: 90px;
 	font-size: 1.4vh;
 	font-family: 'Monserrat', sans-serif;
 	line-height: 1.5em;
     z-index: 0;
 	text-align: justify;
 	text-justify: inter-word;
-	text-shadow: 0 0 4px #FFFFFF, 0 0 4px #FFFFFF;
-	max-height: 400px;
+	text-shadow: 0 0 4px #FFFFFF, 0 0 5px #FFFFFF;
 }
 .bottom_div1 {
 	background-color: rgba(255,255,190,0.5);
