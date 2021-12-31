@@ -39,6 +39,7 @@
 .lightboxs .close {
   position: relative;
   display: block;
+  color: transparent;
 }
 
 .lightboxs .close::after {
